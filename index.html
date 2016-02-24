@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<title>扫车位</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link href="css/ld.css?lfdd" rel="stylesheet">
+
+</head>
+<body style="padding-bottom:9.5rem;height:auto;">
+	<div class="wrap">
+	    <div class="con">
+	    	<div class="indexPark">
+	    		<div class="detailsPark">
+		    		<div class="detailsImg">
+		    			<img src="images/img.jpg" alt="">
+		    		</div>
+		    		<p>星期三，三点三（7月15日，15:15）参与微信抽奖活动，就有免费吃、喝、玩惊喜！！先抢先得，送完即止！点击此页面即可参加抽奖活动！<a href="javascript:void(0);">详情</a></p>
+		    	</div>
+	    	</div>
+	    </div>
+	    <div class="parkRecord">
+    		<a href="javascript:void(0);" class="park"><span>停车记录</span></a>
+    		<div>
+    			<a href="javascript:void(0);">找车位</a>
+    			<a href="javascript:void(0);">记车位</a>
+    			<a href="javascript:void(0);">找商家</a>
+    		</div>
+    	</div>
+    	<div class="tc">
+    		<div class="stop"></div>
+    		<div class="tc_in">
+    			<div class="tc_con" id="wrapper1">
+	    			<div class="tc_con1">
+		    			<div class="img">
+		    				<img src="images/img1.jpg" alt="">
+		    			</div>
+		    			<div class="place">
+		    				<p>高德置地广场</p>
+		    				<p>B3-L区-221 附近</p>
+		    				<div class="time">
+			    				<span>停车计时： 0小时20分</span>
+			    			</div>
+		    			</div>
+		    			<div class="gpslink">
+		    				<a href="javascript:void(0);">
+		    					<img src="images/shop1.jpg" alt="">
+		    					<h3>Zoo Coffee</h3>
+		    					<h4>南区B02楼B03室铺</h4>
+		    					<p>2人同行1人免费</p>
+		    				</a>
+		    			</div>
+		    		</div>	 
+    			</div>
+	    		   		
+    		</div>
+    		<div class="tc_arrow"></div>
+    	</div>
+	</div>
+</body>
+<script src="js/jq.js"></script>
+<script src="js/fastclick.min.js"></script>
+<script src="js/com.js"></script>
+<script src="js/iscroll1.js"></script>
+
+<script>
+	$(".tc .stop").click(function(){
+		$(".tc").addClass("tc_active");
+	})
+
+	if(($(".tc").outerHeight()+$(".parkRecord").outerHeight())>$(window).height()){
+		$(".tc_in").css("height",$(window).height()-$(".parkRecord").outerHeight()-4.7*parseInt(oHtml.style.fontSize));
+	}
+	var myScroll;
+	myScroll = new IScroll('#wrapper1');
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
+</html>
